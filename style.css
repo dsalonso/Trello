@@ -1,0 +1,93 @@
+/* que coloco al body */
+body{
+    margin: 0;
+    padding: 0%;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: lightgreen;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: darkslategrey;
+}
+/*la caja blanca */
+.container {
+    width: 400px;
+    background-color: white;
+    padding: 30px; 
+    margin: 30px auto; /*margen arriba y abajo porque puse auto al final del primer valor */
+}
+
+/*caja que tiene el form */
+.tareasList {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%; /*que ocupe todo el ancho de la caja*/
+}
+
+/* si tengo mas de un form deberia armar un class por cada form si quiero estilos distintos */
+form {
+    display: flex; /*para que el boton este pegado con el texto del input */
+}
+
+/* si hubiera mas de un input deberia armar un class por cada uno igual al form */
+input {
+    padding: 15px 10px;
+    width: 400px;
+}
+
+.btn-add {
+    padding: 5px;
+    color: white;
+    background-color: teal;
+    font-family: fantasy;
+    border: none; /*saca el borde gris con el que viene el default */
+    font-size: 1.4rem;
+    outline: none;
+}
+
+/* cuando el cursor pasa sobre el boton */
+.btn-add:hover {
+    cursor: pointer;
+    background-color: rebeccapurple;
+}
+
+.empty {
+    color: green;
+}
+
+.toDo {
+    color:  blue;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%; /*que ocupe todo el ancho de la caja*/
+    
+}
+
+li {
+    /*para que quede en la mima linea NO SIRVE EN EL toDO porque es el P*/
+    display: flex;
+}
+
+li p {
+
+}
+
+/* solo visible cuando empieza a aparecer la lista */
+.btn-delete {
+    color: black;
+    background-color: red;
+    border: none;
+    outline: none;
+    padding: 5%;
+    width: 10%;
+    font-size: 
+}
+
+/* cuando me pongo arriba del boton */
+.btn-delete:hover {
+
+}

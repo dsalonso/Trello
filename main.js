@@ -8,7 +8,8 @@ const addBtn = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 //el empty tambin lo llamo por la clase class empty
 const empty = document.querySelector(".empty");
-
+//listado de historial
+const historial = document.querySelector(".historial");
 //veo el evento de apretar el boton. El evento es "click".
 addBtn.addEventListener("click", (e)=>{
 
@@ -19,22 +20,27 @@ addBtn.addEventListener("click", (e)=>{
     if(text !== "") {
         //como no esta vacio text lo guardo en un li
         const li = document.createElement("li");
+        const li_hist = document.createElement("li");
         //armo un p (parrafo)
         const p = document.createElement("p");
+        const p_hist = document.createElement("p");
         //vuelco a p el valor de text para que me quede el texto
         p.textContent = text;
+        p_hist.textContent = text;
         //le adiciono una clase a la lista que voy armando
         p.className= "toDo";
+        p_hist.className = "toDoHistorial"
         // le paso a ul los valores haciendo append
- //       const deleteBtn = document.createElement("button");
- //       deleteBtn.textContent ="X";
- //       deleteBtn.className= "btn-delete";
- //       p.appendChild(deleteBtn);
         li.appendChild(p);
+        li_hist.appendChild(p_hist);
         //como tengo que agregar al final un boton para poder borrar - uso una funcion (addDeleteBtn) para agregar ese boton
+        //lo agrego al historial sin el boton
+        //console.log(historial);
         li.appendChild(addDeleteBtn());
         //al ul ahora si le devuelvo el li
         ul.appendChild(li);
+        //en historial nunca borro el listado siempre lo adjunto
+        historial.appendChild(li_hist);
         //ahora debo sacar el coloco el input en null (variable)
         input.value="";
         //oculto el parrafo  <p> que dice que "No tiene tareas pendientes..."
